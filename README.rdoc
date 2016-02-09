@@ -1,0 +1,7 @@
+== README
+
+This blog I am creating for two main reasons. The first is that I want to focus on learning more about rails and the work that it does with databases. The second reason that I am creating this blog is that it may eventually become a blog for my wife. She loves to cook and wants a blog where she can show off what she is making. 
+
+Gems Used: 
+
+Bootstrap, Font-Awesome, paperclip, devise 
