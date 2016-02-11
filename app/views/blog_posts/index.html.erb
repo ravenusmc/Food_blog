@@ -12,6 +12,7 @@
         </div>
         <div class="panel-body">
           by <%= blog_post.user.username %><br />
+          <p>Created on: <%= blog_post.created_at.strftime('%m/%d/%Y') %></p>
           <%= image_tag blog_post.avatar.url(:medium) %>
           <p><%= blog_post.blog_entry[0..250] %>..[<%= link_to "READ MORE", blog_post %>]</p>
         </div>

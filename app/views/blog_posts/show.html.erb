@@ -7,6 +7,7 @@
     </div>
     <div class="panel-body">
       By <strong><%= @blog_post.user.username %></strong>
+      <p>Created on: <%= @blog_post.created_at.strftime('%m/%d/%Y') %></p>
       <p><%= image_tag @blog_post.avatar.url(:medium) %></p>
       </p><%= @blog_post.blog_entry %></p>
     </div>
