@@ -11,7 +11,7 @@
           <%= link_to blog_post.title, blog_post %>
         </div>
         <div class="panel-body">
-          by <%= blog_post.user.email %><br />
+          by <%= blog_post.user.username %><br />
           <%= image_tag blog_post.avatar.url(:medium) %>
           <p><%= blog_post.blog_entry[0..250] %>..[<%= link_to "READ MORE", blog_post %>]</p>
         </div>
