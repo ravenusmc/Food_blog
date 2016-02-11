@@ -29,6 +29,7 @@
           <div class="panel-body">
             <p><strong><%= comment.user.username %></strong> said: </p>
             <p><%= comment.comment_entry %></p>
+            <p><%= comment.created_at.strftime('%m/%d/%Y %H:%M:%S') %></p>
           </div>
         <% end %>
     </div>
