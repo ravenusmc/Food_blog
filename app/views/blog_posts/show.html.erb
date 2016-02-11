@@ -7,6 +7,7 @@
     </div>
     <div class="panel-body">
       <p><%= @blog_post.author %></p>
+      <p><%= image_tag @blog_post.avatar.url(:medium) %></p>
       </p><%= @blog_post.blog_entry %></p>
     </div>
   </div>
