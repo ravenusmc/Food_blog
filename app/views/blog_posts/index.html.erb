@@ -8,12 +8,13 @@
     <div class="col-md-6">
       <div class="panel panel-primary">
         <div class="panel-heading head">
-          <%= link_to blog_post.title, blog_post %>
-        </div>
-        <div class="panel-body">
+          <p class="index_title"><%= link_to blog_post.title, blog_post %></p>
           by <%= blog_post.user.username %><br />
+        </div>
+        <div class="panel-body body_sytle">
           <p>Created on: <%= blog_post.created_at.strftime('%m/%d/%Y') %></p>
           <%= image_tag blog_post.avatar.url(:medium) %>
+          <h3 class="body_learn">Learn more about this meal:</h3>
           <p><%= blog_post.blog_entry[0..250] %>..[<%= link_to "READ MORE", blog_post %>]</p>
         </div>
         <% if current_user.id == blog_post.user.id %>
