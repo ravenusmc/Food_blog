@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <div class="container">
-  <div class="panel panel-primary">
+  <div class="panel panel-primary show_comments">
     <div class="panel-heading">
       <%= @blog_post.title %>
     </div>
@@ -13,7 +13,7 @@
     </div>
   </div>
 
-  <div class="panel panel-success">
+  <div class="panel panel-success show_comments">
     <div class="panel-heading">
       Make a Comment
     </div>
@@ -22,7 +22,7 @@
     </div>
   </div>
 
-  <div class="panel panel-primary">
+  <div class="panel panel-primary show_comments">
     <div class="panel-header">
       <h4>Comments</h4>
         <% @blog_post.comments.each do |comment| %>
