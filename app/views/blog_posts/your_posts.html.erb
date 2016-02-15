@@ -5,12 +5,12 @@
         <div class="col-md-12">
           <div class="panel panel-info">
             <div class="panel-heading">
-              <p class="your_title"><%= link_to blog_post.title, blog_post, class: "btn btn-primary" %></p>
+              <p class="your_title"><%= link_to blog_post.title, blog_post %></p>
               <p class="your_title"><%= blog_post.created_at.strftime('%m/%d/%Y') %></p>
             </div>
             <div class="panel-body">
               <p class="your_image"><%= image_tag blog_post.avatar.url(:medium) %></p>
-              <p>By: <%= blog_post.user.username %></p><br />
+              <p class="your_image">By: <%= blog_post.user.username %></p><br />
               <p><%= blog_post.blog_entry[0..250] %>...[<%= link_to "Read More", blog_post %>]</p>
             </div>
             <div class="panel-footer">
