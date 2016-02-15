@@ -1,15 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-<h1 class="index_h1"><i class="fa fa-cutlery"></i> Food Blog Posts <i class="fa fa-cutlery"></i></h1>
+<div class="index_top_div">
+  <h1 class="index_h1"><i class="fa fa-cutlery"></i> Food Blog Posts <i class="fa fa-cutlery"></i></h1>
+</div>
 
 <div class="container index_top">
   <div class="row index_post">
     <% @blog_posts.each do |blog_post| %>
     <div class="col-md-6">
-      <div class="panel panel-primary">
+      <div class="panel panel-primary background_your">
         <div class="panel-heading head">
-          <p class="index_title"><%= link_to blog_post.title, blog_post %></p>
-          by <%= blog_post.user.username %><br />
+          <p class="index_title your_title"><%= link_to blog_post.title, blog_post %></p>
+          <p class="your_title">by <%= blog_post.user.username %></p><br />
         </div>
         <div class="panel-body body_sytle">
           <p>Created on: <%= blog_post.created_at.strftime('%m/%d/%Y') %></p>
@@ -27,7 +29,7 @@
     </div>
   <% end %>
   </div>
-   <%= paginate @blog_posts %>
+    <%= paginate @blog_posts %>
 </div>
 
 

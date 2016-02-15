@@ -3,7 +3,7 @@
     <div class="row">
       <% current_user.blog_posts.each do |blog_post| %>
         <div class="col-md-12">
-          <div class="panel panel-info">
+          <div class="panel panel-info background_your">
             <div class="panel-heading">
               <p class="your_title"><%= link_to blog_post.title, blog_post %></p>
               <p class="your_title"><%= blog_post.created_at.strftime('%m/%d/%Y') %></p>
