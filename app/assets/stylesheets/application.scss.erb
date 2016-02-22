@@ -137,23 +137,38 @@
 
 .about_background {
   background-image: url("bread.jpeg");
-  background-position: 0px 40px;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment:fixed;
+  margin-top: -25px;
+  min-height: 100%;
+
+}
+
+/*  background-position: 0px 40px;
   background-attachment: fixed;
   background-size: 100% 100%;
   background-position: center center;
   margin-top: -25px;
-  height: 1500px;
-}
+  height: 1500px;*/
+
+
 
 .heading_block {
   background-color: rgba(200,100,175, 0.8);
   border-radius: 35px;
-  margin-top: 55px;
+
+  position: relative;
+  top: 55px; 
 }
 
 .about_heading {
   text-align: center;
   font-size: 50px;
+
 }
 
 .about1 {
