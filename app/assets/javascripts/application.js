@@ -15,3 +15,19 @@
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
+
+// function changeImage() {
+//     var image = document.getElementById('myImage').style.backgroundImage="url(wine_glass.jpeg)"
+// }
+
+// (function() {
+//   var myImageEl = document.getElementById('MyImage');
+//   var background2Enabled = false;
+  
+//   function toggleBackground() {
+//     background2Enabled = !background2Enabled;
+//     myImageEl.className = background2Enabled ? 'background-2' : 'background-1';
+//   }
+  
+//   myImageEl.addEventListener('click', toggleBackground);
+// })();

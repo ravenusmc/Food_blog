@@ -11,12 +11,12 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-6 row-1 pic_1">
+    <div id="MyImage" class="col-md-6 background-1">
       <div class="c-imageBlock_content">
         <h2>Test</h3>
       </div>
     </div>
-    <div class="col-md-6 row-1 pic_2">
+    <div id="MyImage" class="col-md-6 background-2">
       <div class="c-imageBlock_content">
         <h2>Test</h3>
       </div>
@@ -83,4 +83,18 @@
       <em class="footer1">&copy; 2016 Mike Cuddy Productions</em>
     </p>
 </div>
+
+<script> 
+(function() {
+  var myImageEl = document.getElementById('MyImage');
+  var background2Enabled = false;
+  
+  function toggleBackground() {
+    background2Enabled = !background2Enabled;
+    myImageEl.className = background2Enabled ? 'background-2' : 'background-1';
+  }
+  
+  myImageEl.addEventListener('click', toggleBackground);
+})();
+</script>
 
