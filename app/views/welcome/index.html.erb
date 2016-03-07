@@ -1,5 +1,5 @@
 <h1 class="zen">Chef Wife</h1> 
-<div class="jumbotron">
+<div id="MyPic" class="jumbotron test1">
     <section class="banner" > 
       <div class="inner">
         <h3>Abby Cuddy Ph.D</h3>
@@ -71,12 +71,12 @@
 
 <script> 
 (function() {
-  var myImageEl = document.getElementById('MyImage');
+  var myImageEl = document.getElementById('MyPic');
   var background2Enabled = false;
   
   function toggleBackground() {
     background2Enabled = !background2Enabled;
-    myImageEl.className = background2Enabled ? 'background-2' : 'background-1';
+    myImageEl.className = background2Enabled ? 'test1' : 'test2';
   }
   
   myImageEl.addEventListener('click', toggleBackground);
