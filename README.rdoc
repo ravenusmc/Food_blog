@@ -5,3 +5,9 @@ This blog I am creating for two main reasons. The first is that I want to focus 
 Gems Used: 
 
 Bootstrap, Font-Awesome, paperclip, devise, aws-sdk, kaminari
+
+Final site up and it may be found at the following link: 
+
+https://chefwife.herokuapp.com/
+
+There will be more improvements to it over time! 
