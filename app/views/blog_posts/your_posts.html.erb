@@ -9,16 +9,12 @@
           </div>
           <div class="content">
             <a class="header"><%= link_to blog_post.title, blog_post %></a>
+            <p>By: <%= blog_post.user.username %></p>
             <div class="meta">
               <span><%= blog_post.created_at.strftime('%m/%d/%Y') %></span>
             </div>
             <div class="description">
-              <p><%= blog_post.blog_entry[0..250] %>...[<%= link_to "Read More", blog_post %>]</p> 
-            </div>
-            <div class="extra">
-              <a class="ui floated basic blue button">
-                Read More<i class="right chevron icon"></i>
-              </a>
+              <p><%= blog_post.blog_entry[0..250] %>...<%= link_to "Read More", blog_post, class: "ui floated basic blue button right chevron icon" %></p> 
             </div>
           </div>
         </div>
