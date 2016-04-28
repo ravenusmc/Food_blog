@@ -1,37 +1,29 @@
 <p id="notice"><%= notice %></p>
 
-<div class="container index_top_div">
-  <h1 class="index_h1"><i class="fa fa-cutlery"></i> Food Dishes <i class="fa fa-cutlery"></i></h1>
-</div>
-
-<div class="container index_top">
-  <div class="row index_post">
-    <% @blog_posts.each do |blog_post| %>
-    <div class="col-md-6">
-      <div class="panel panel-primary background_your">
-        <div class="panel-heading head">
-          <p class="index_title your_title"><%= link_to blog_post.title, blog_post %></p>
-          <p class="your_title">by <%= blog_post.user.username %></p><br />
-        </div>
-        <div class="panel-body body_sytle">
-          <p>Created on: <%= blog_post.created_at.strftime('%m/%d/%Y') %></p>
-          <%= image_tag blog_post.avatar.url(:medium) %>
-          <h3 class="body_learn">Learn more about this meal:</h3>
-          <p><%= simple_format(blog_post.blog_entry)[0..250] %>..[<%= link_to "READ MORE", blog_post %>]</p>
-
-
-        </div>
-        <% if current_user.id == blog_post.user.id %>
-          <div class="panel-footer">
-            <%= link_to 'Edit', edit_blog_post_path(blog_post), class: "btn btn-info" %>
-            <%= link_to 'Destroy', blog_post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+<div class="ui main text container">
+  <div class="ui huge header title_your_post">Food Blog!</div>
+  <div class="ui top attached segment">
+    <div class="ui divided items">
+      <% current_user.blog_posts.each do |blog_post| %>
+        <div class="item">
+          <div class="image">
+            <%= image_tag blog_post.avatar.url(:medium) %>
           </div>
-        <% end %>
-      </div>
+          <div class="content">
+            <a class="header"><%= link_to blog_post.title, blog_post %></a>
+            <p>By: <%= blog_post.user.username %></p>
+            <div class="meta">
+              <span><%= blog_post.created_at.strftime('%m/%d/%Y') %></span>
+            </div>
+            <div class="description">
+              <p><%= blog_post.blog_entry[0..250] %>...<%= link_to "Read More", blog_post, class: "ui floated basic blue button right chevron icon" %></p> 
+            </div>
+          </div>
+        </div>
+      <% end %>
     </div>
-  <% end %>
   </div>
-    <%= paginate @blog_posts %>
+  <%= paginate @blog_posts %>
 </div>
 
 
