@@ -1,24 +1,28 @@
-<div class="container your_top">
-  <h1 class="blog_top"><%= current_user.username %>'s Blog!</h1>
-    <div class="row">
+<div class="ui main text container">
+  <div class="ui huge header">Blog App</div>
+  <div class="ui top attached segment">
+    <div class="ui divided items">
       <% current_user.blog_posts.each do |blog_post| %>
-        <div class="col-md-12">
-          <div class="panel panel-info background_your">
-            <div class="panel-heading">
-              <p class="your_title"><%= link_to blog_post.title, blog_post %></p>
-              <p class="your_title"><%= blog_post.created_at.strftime('%m/%d/%Y') %></p>
+        <div class="item">
+          <div class="image">
+            <%= image_tag blog_post.avatar.url(:medium) %>
+          </div>
+          <div class="content">
+            <a class="header"><%= link_to blog_post.title, blog_post %></a>
+            <div class="meta">
+              <span><%= blog_post.created_at.strftime('%m/%d/%Y') %></span>
             </div>
-            <div class="panel-body">
-              <p class="your_image"><%= image_tag blog_post.avatar.url(:medium) %></p>
-              <p class="your_image author">By: <%= blog_post.user.username %></p><br />
-              <p><%= blog_post.blog_entry[0..250] %>...[<%= link_to "Read More", blog_post %>]</p>
+            <div class="description">
+              <p><%= blog_post.blog_entry[0..250] %>...[<%= link_to "Read More", blog_post %>]</p> 
             </div>
-            <div class="panel-footer">
-              <%= link_to 'Edit', edit_blog_post_path(blog_post), class: "btn btn-warning" %>
-              <%= link_to 'Destroy', blog_post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+            <div class="extra">
+              <a class="ui floated basic blue button">
+                Read More<i class="right chevron icon"></i>
+              </a>
             </div>
           </div>
         </div>
       <% end %>
     </div>
+  </div>
 </div>
