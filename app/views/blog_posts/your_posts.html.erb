@@ -14,7 +14,11 @@
               <span><%= blog_post.created_at.strftime('%m/%d/%Y') %></span>
             </div>
             <div class="description">
-              <p><%= blog_post.blog_entry[0..250] %>...<%= link_to "Read More", blog_post, class: "ui floated basic blue button right chevron icon" %></p> 
+              <p><%= blog_post.blog_entry[0..250] %>...<%= link_to "Read More", blog_post, class: "ui floated basic blue button" %></p> 
+              <% if current_user.id == blog_post.user.id %>
+                <%= link_to 'Edit', edit_blog_post_path(blog_post), class: "ui floated basic blue button" %>
+                <%= link_to 'Destroy', blog_post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+              <% end %>
             </div>
           </div>
         </div>
@@ -22,3 +26,4 @@
     </div>
   </div>
 </div>
+

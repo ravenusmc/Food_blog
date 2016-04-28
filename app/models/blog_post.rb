@@ -4,7 +4,8 @@ class BlogPost < ActiveRecord::Base
 
   default_scope { order('created_at DESC') }
 
-  paginates_per 2
+  #I was using paginator on this site and may come back to it. For now it is not being used.
+  #paginates_per 3
   
   belongs_to :user
   has_many :comments 
